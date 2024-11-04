@@ -67,6 +67,30 @@
     }while($i<count($array));
     ?>
 
+
+    <?php
+    // Function
+    function filterBooks($books) {
+        $filteredBooks = [];
+        foreach ($books as $book) {
+            if ($book["author"] === "George Orwell") {
+                $filteredBooks[] = $book;
+            }
+        }
+        return $filteredBooks;
+    }
+
+    $books = [
+        ["title" => "The Hobbit", "author" => "J.R.R. Tolkien"],
+        ["title" => "To Kill a Mockingbird", "author" => "Harper Lee"],
+        ["title" => "1984", "author" => "George Orwell"]
+    ];
+
+    foreach(filterBooks($books) as $book) {
+        echo $book["title"]. " by ". $book["author"]. "<br>";
+    }
+    ?>
+
 </body>
 
 </html>
