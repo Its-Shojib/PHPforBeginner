@@ -1,3 +1,3 @@
 <?php
 
-require "reports.view.php";
+require "views/reports.view.php";

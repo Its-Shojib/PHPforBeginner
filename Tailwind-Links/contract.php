@@ -1,3 +1,3 @@
 <?php
 
-require "contract.view.php";
+require "views/contract.view.php";
